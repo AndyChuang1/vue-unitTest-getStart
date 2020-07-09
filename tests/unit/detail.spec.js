@@ -20,7 +20,7 @@ describe('detail.vue', () => {
         isAdmin: true,
       },
     });
-    console.log(wrapper);
+    console.log(wrapper.find('.hello').text());
     expect(wrapper.find('.hello').text()).toBe('Hello Andy !');
   });
 });

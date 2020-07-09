@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Counter from '../views/Counter/Counter.vue';
 import Reverse from '../views/Reverse.vue';
+import Weather from '../views/Weather.vue';
 
 Vue.use(VueRouter);
 
@@ -29,6 +30,11 @@ const routes = [
     path: '/reverse',
     name: 'reverse',
     component: Reverse,
+  },
+  {
+    path: '/weather',
+    name: 'weather',
+    component: Weather,
   },
 ];
 
