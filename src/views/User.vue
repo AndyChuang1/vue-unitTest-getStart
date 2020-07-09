@@ -1,7 +1,7 @@
 <template>
   <div class="Weather">
-    <h1 id="text">{{ weather }}</h1>
-    <button id="getWeather" @click="getWeather()">Get Weather</button>
+    <h1 id="text">{{ Name }}</h1>
+    <button id="getUser2" @click="getUser(2)">Get User2</button>
   </div>
 </template>
 
@@ -11,21 +11,19 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      weather: '',
+      Name: '',
     };
   },
   created() {
-    this.getWeather();
+    this.getUser(1);
   },
   methods: {
-    getWeather() {
+    getUser(id) {
       axios
-        .get(
-          'https://api.openweathermap.org/data/2.5/weather?id=1670651&appid=7dad838277c0cc8fdf1a241d7c180753&units=metric',
-        )
+        .get(`http://jsonplaceholder.typicode.com/users/${id}`)
         .then((res) => {
           const { data } = res;
-          this.weather = data.weather[0].main;
+          this.Name = data.username;
         })
         .catch((err) => {
           console.log(err);
