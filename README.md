@@ -1,34 +1,16 @@
 # unit-test-get-start
 
-## Project setup
-```
-npm install
-```
+## Create Vue project with Vue-cli
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Test description
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- counter.spec.js
 
-### Run your tests
-```
-npm run test
-```
+Test button click method, output is we expect
+ - reverse.spec.js
+ 
+Test computed output we expected
+ - detail.spec.js
 
-### Lints and fixes files
-```
-npm run lint
-```
+Test props data output we expected
 
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
